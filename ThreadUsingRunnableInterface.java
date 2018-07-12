@@ -15,17 +15,18 @@ public class ThreadUsingRunnableInterface implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		ThreadUsingRunnableInterface obj = new ThreadUsingRunnableInterface();
-		Thread thread1 = new Thread(obj);
+		ThreadUsingRunnableInterface obj1 = new ThreadUsingRunnableInterface();
+		Thread thread1 = new Thread(obj1);
 		thread1.setName("ThreadOne");
-		thread1.setPriority(1);
+		thread1.setPriority(Thread.MIN_PRIORITY); //
 		thread1.start();
-		/*Run Method will be internally called from start() method*/
-		
-		Thread thread2 = new Thread(obj, "ThreadTwo");
-		thread2.setPriority(2);
+		/* Run Method will be internally called from start() method */
+
+		ThreadUsingRunnableInterface obj2 = new ThreadUsingRunnableInterface();
+		Thread thread2 = new Thread(obj2, "ThreadTwo");
+		thread2.setPriority(Thread.MAX_PRIORITY);
 		thread2.start();
-		
+
 		for (int i = 0; i < 10; i++) {
 			System.out.println(Thread.currentThread().getName() + " ==" + i);
 		}
