@@ -1,5 +1,12 @@
 package com.java.thread;
 
+/*
+ * You can only extend one class in your new class, but you can implement as many interfaces as you would like.
+ * So if we use, implement Runnable interface then if needed we can extend another class but in case of
+ * Extending Thread class we can not extend another class if needed so, Runnable is preferable over Thread class
+ * 
+ * */
+
 public class ThreadUsingRunnableInterface implements Runnable {
 
 	@Override
