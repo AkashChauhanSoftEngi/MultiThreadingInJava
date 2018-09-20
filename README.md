@@ -16,7 +16,7 @@
     
 * Variable
   - Mark it final
-  - Mark it voletile
+  - Mark it volatile
     - When using final and volatile variables
     - Changes will be reflected to other threads without acquiring the expensive lock for read operations
     - No such need of locking or blocking the resources in this case
