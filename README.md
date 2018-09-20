@@ -17,6 +17,9 @@
 * Variable
   - Mark it final
   - Mark it voletile
+    - When using final and volatile variables
+    - Changes will be reflected to other threads without acquiring the expensive lock for read operations
+    - No such need of locking or blocking the resources in this case
   - Use Atomic wrapper classes {Inside java.util.concurrent.atomic... package}
   
 * Methods
